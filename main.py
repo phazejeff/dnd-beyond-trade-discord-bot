@@ -9,7 +9,9 @@ from discord import app_commands
 intents = discord.Intents.default()
 bot = commands.Bot(intents=intents, command_prefix=".")
 # TOKEN = ''
-TOKEN = os.environ['BOT_TOKEN']
+f = open('bot_token.txt')
+TOKEN = f.read()
+f.close()
 
 BOBBY_ID = 372447300586569730
 
