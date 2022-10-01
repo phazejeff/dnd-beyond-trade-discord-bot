@@ -1,14 +1,16 @@
-from tabnanny import check
 from typing import Optional
 
 import dnd
 import discord
+import os
 from discord.ext import commands
 from discord import app_commands
 
 intents = discord.Intents.default()
 bot = commands.Bot(intents=intents, command_prefix=".")
-TOKEN = ''
+# TOKEN = ''
+TOKEN = os.environ['BOT_TOKEN']
+
 BOBBY_ID = 372447300586569730
 
 def getCustomData(character, itemNum):
