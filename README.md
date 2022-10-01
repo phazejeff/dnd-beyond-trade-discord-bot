@@ -13,3 +13,5 @@ DND Beyond does not have a public API, therefore I am using an admittedly hacky 
 ## Setup
 
 I do not run this bot for public use. If you want to use this bot, you will need to run it yourself for your own server. 
+
+`TODO: Create setup guide`
