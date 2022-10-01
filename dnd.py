@@ -9,6 +9,7 @@ URL_TRANSACTION = 'https://character-service.dndbeyond.com/character/v5/inventor
 
 f = open('session.txt')
 COBALT_SESSION = f.read()
+print(COBALT_SESSION)
 f.close()
 
 
