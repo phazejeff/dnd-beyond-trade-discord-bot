@@ -18,11 +18,11 @@ With COBALT_SESSION set to a valid session ID, this will return an auth token fo
 '''
 def get_auth():
     headers = {
-        'Accept': '*/*',
-        'Cookie' : 'CobaltSession=' + COBALT_SESSION
+        'Accept': '*/*'
     }
+    cookies = {"CobaltSession": COBALT_SESSION}
 
-    res = requests.post(URL_AUTH, headers=headers)
+    res = requests.post(URL_AUTH, headers=headers, cookies=cookies)
     return res.json()['token']
 
 def add_item(characterId, entityId, entityTypeId, quantity):
