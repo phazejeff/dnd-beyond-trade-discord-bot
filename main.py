@@ -195,7 +195,7 @@ async def pay(
     await view.wait()
 
 def check_if_bob(interaction: discord.Interaction) -> bool:
-    return interaction.user.id == BOBBY_ID
+    return interaction.user.id == BOBBY_ID or interaction.user.id == 230119473590304768
 
 @bot.tree.command(description="Only for DM")
 @app_commands.check(check_if_bob)
