@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Set bot token
-      run: echo "${{ secrets.BOT_TOKEN }}"" > bot_token.txt
+      run: echo "${{ secrets.BOT_TOKEN }}" > bot_token.txt
 
     - name: Set Cobalt Session
       run: echo "${{ secrets.COBALT_SESSION }}" > session.txt
