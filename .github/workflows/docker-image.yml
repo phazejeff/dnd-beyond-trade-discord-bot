@@ -18,7 +18,7 @@ jobs:
       run: echo "${{ secrets.BOT_TOKEN }}"" > bot_token.txt
 
     - name: Set Cobalt Session
-      run: echo "${{ secrets.COBALT_SESSION }}"" > session.txt
+      run: echo "${{ secrets.COBALT_SESSION }}" > session.txt
       
     - name: Set characters
       run: echo "${{ secrets.CHARACTERS }}" > characters.txt
