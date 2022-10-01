@@ -1,0 +1,24 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set Cobalt Session
+      run: echo ${{ secrets.COBALT_SESSION }} > session.txt
+      
+    - name: Set characters
+      run: echo "${{ secrets.CHARACTERS }}" > characters.txt
+      
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag dnd-beyond-bot:$(date +%s) --build-arg BOT_TOKEN=${{ secrets.BOT_TOKEN }}
